@@ -38,7 +38,7 @@ export class PokemonService {
 
     getAllPokemon = async () => {
         try {
-            const pokemons = await this.pokemonModel.find({})
+            const pokemons = await this.pokemonModel.find({isRemove: false})
             return pokemons
         } catch (e) {
             return e
